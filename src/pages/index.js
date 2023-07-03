@@ -4,6 +4,7 @@ import Landing from "./Landing";
 import Error from "./Error"
 import HomeLayout from "./HomeLayout";
 import Newsletter from "./Newsletter";
+import Navbar from "../components/Navbar";
 
 export {
     Landing,
@@ -11,5 +12,6 @@ export {
     Cocktail,
     Error,
     HomeLayout,
-    Newsletter
+    Newsletter,
+    Navbar
 }
