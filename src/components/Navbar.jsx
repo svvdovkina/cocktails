@@ -67,6 +67,7 @@ const Wrapper = styled.nav`
         };
 
         .nav-links {
+            margin-top: 0;
             display: flex;
             flex-direction: row;
             gap: 15px;
