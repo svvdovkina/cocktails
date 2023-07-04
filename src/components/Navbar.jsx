@@ -34,7 +34,7 @@ const Wrapper = styled.nav`
     };
 
     .nav-links {
-        margin-top: 20px;
+        margin: 20px 0;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -67,7 +67,7 @@ const Wrapper = styled.nav`
         };
 
         .nav-links {
-            margin-top: 0;
+            margin: 0;
             display: flex;
             flex-direction: row;
             gap: 15px;

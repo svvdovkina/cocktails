@@ -18,7 +18,8 @@ const CocktailList = ({drinks})=>{
 
 const Wrapper = styled.div`
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly;
+    gap: 30px;
     flex-wrap: wrap;
 `
 
