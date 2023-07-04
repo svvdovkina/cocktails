@@ -5,6 +5,7 @@ import Error from "./Error"
 import HomeLayout from "./HomeLayout";
 import Newsletter from "./Newsletter";
 import Navbar from "../components/Navbar";
+import SinglePageError from "./SinglePageError";
 
 export {
     Landing,
@@ -13,5 +14,6 @@ export {
     Error,
     HomeLayout,
     Newsletter,
-    Navbar
+    Navbar,
+    SinglePageError
 }
