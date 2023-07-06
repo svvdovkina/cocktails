@@ -61,6 +61,7 @@ const Wrapper = styled.nav`
             flex-direction: row;
             justify-content: space-between;
             margin: 0 auto;
+            padding: 20px 0;
             width: 80vw;
             max-width: 700px;
             align-items: center;

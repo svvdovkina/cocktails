@@ -17,8 +17,6 @@ const HomeLayout = ()=>{
             }
         </Wrapper>
         
-        <footer>Footer</footer>
-        
     </>
 }
 

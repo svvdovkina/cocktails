@@ -61,17 +61,6 @@ const Wrapper = styled.div`
         margin: 0 0 10px 0;
         padding:0;
     }
-    .btn {
-        text-decoration: none;
-        background-color: #12a212;
-        padding: 7px 20px;
-        color: white;
-        border-radius: 5px;
-        box-shadow: inset -1px -1px 3px 1px rgba(0,0,0,0.2);
-    }
-    .btn:hover{
-        background-color: #0b6c0b;
-    }
 `
 
 export default CocktailCard
