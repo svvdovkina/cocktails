@@ -42,18 +42,18 @@ const Wrapper = styled.nav`
 
     .nav-link {
         text-decoration: none;
-        color: #12a212;
-        font-size: 1.2rem;
+        color: #353535;
+        font-size: 1.1rem;
         font-weight: 500;
         transition: linear 0.2s;
         letter-spacing: 2px;
     };
 
     .nav-link:hover {
-        color: #0b6c0b;
+        color: #12a212;
     }
     .active {
-        color: #0b6c0b;
+        color: #12a212;
     }
     @media (min-width: 768px) {
         .nav-center {
