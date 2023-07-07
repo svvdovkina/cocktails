@@ -5,8 +5,10 @@ import SearchForm from "../components/SearchForm";
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
 
-export const loader = async ()=>{
-    const searchTerm = "margarita";
+export const loader = async ({request})=>{
+    const reqUrl = new URL(request.url);
+
+    const searchTerm = reqUrl.searchParams.get("search") || "margarita";
     try {
         const resp = await axios.get(`${url}s=${searchTerm}`);
         return {drinks: resp.data.drinks, searchTerm}
@@ -16,12 +18,11 @@ export const loader = async ()=>{
 }
 
 const Landing = ()=>{
-    const data = useLoaderData();
-    console.log(data)
+    const {drinks, searchTerm} = useLoaderData();
 
     return <>
-        <SearchForm/>
-        <CocktailList drinks={data.drinks}/>
+        <SearchForm searchTerm={searchTerm}/>
+        <CocktailList drinks={drinks}/>
     </>
     
 }
