@@ -1,32 +1,72 @@
+import { Form, redirect, useNavigation } from "react-router-dom"
 import styled from "styled-components"
 
+export const action = async ({request}) =>{
+    const formData = await request.formData();
+    const data = Object.fromEntries(formData);
+    console.log(data);
+
+    //post requiest to actual api
+
+    return redirect('/');
+}
+
 const Newsletter = ()=>{
-    return <Wrapper><form action="">
+
+    const navigation = useNavigation();
+    const isSubmitting = navigation.state === 'submitting';
+
+    return <Wrapper><Form method="POST">
         <h4>Our newsletter</h4>
         {/*name*/}
         <div className="form-row">
-            <label htmlFor="name" className="form-label">
+            <label 
+            htmlFor="name" 
+            className="form-label">
                 name
             </label>
-            <input type="text" className="from-input" name="name" id="name" defaultValue="john" />
+            <input 
+            type="text" 
+            className="from-input" 
+            required
+            name="name" 
+            id="name"  />
         </div>
          {/*last name*/}
          <div className="form-row">
-            <label htmlFor="lastName" className="form-label">
+            <label 
+            htmlFor="lastName" 
+            className="form-label">
                 last name
             </label>
-            <input type="text" className="from-input" name="lastName" id="lastName" defaultValue="smith" />
+            <input 
+            type="text" 
+            className="from-input" 
+            name="lastName" 
+            id="lastName"  />
         </div>
 
         {/*email*/}
         <div className="form-row">
-            <label htmlFor="email" className="form-label">
+            <label 
+            htmlFor="email" 
+            className="form-label">
                 email
             </label>
-            <input type="email" className="from-input" name="email" id="email" defaultValue="john@smith.com" />
+            <input 
+            type="email" 
+            className="from-input" 
+            name="email" 
+            id="email" 
+            required />
         </div>
-        <button type="submit" className="btn">Send me Newsletters</button>
-    </form>
+        <button 
+        type="submit" 
+        className="btn"
+        disabled={isSubmitting}>
+            {isSubmitting ? "Subscribing" : "Send me Newsletters"}
+        </button>
+    </Form>
     </Wrapper>
 }
 
