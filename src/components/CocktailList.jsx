@@ -6,7 +6,7 @@ import styled from "styled-components"
 const CocktailList = ({drinks})=>{
 
     if (!drinks) {
-        return <h3>No matching cocktaill found...</h3>
+        return <h3>No matching cocktails found...</h3>
     }
 
     return <Wrapper>
